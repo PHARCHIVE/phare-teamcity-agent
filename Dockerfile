@@ -1,4 +1,4 @@
-FROM fedora:31
+FROM fedora:32
 #Derived from official TeamCity image
 LABEL modified "philip.deegan <philip.deegan@gmail.com>"
 
@@ -11,7 +11,7 @@ RUN dnf install -y java-1.8.0-openjdk xorg-x11-server-Xvfb git make cmake tar gz
                    python3-breathe python3-docutils python3-numpy python3-scipy python3-openmpi \
                    python3-mpi4py-openmpi libasan libubsan lcov python3-ddt \
                    which gitstats wget doxygen g++ clang \
-                   python3-h5py python3-matplotlib 
+                   python3-h5py python3-matplotlib
 
 
 VOLUME /data/teamcity_agent/conf
@@ -37,7 +37,7 @@ RUN useradd -m buildagent && \
 RUN echo " " >> /opt/buildagent/conf/buildAgent.dist.properties && \
     echo "system.distrib=fedora" >> /opt/buildagent/conf/buildAgent.dist.properties && \
     echo "system.project=phare" >> /opt/buildagent/conf/buildAgent.dist.properties && \
-    echo "system.agent_name=teamcity-docker-phare-fc31" >> /opt/buildagent/conf/buildAgent.dist.properties
+    echo "system.agent_name=teamcity-docker-phare-fc32" >> /opt/buildagent/conf/buildAgent.dist.properties
 
 CMD ["/run-services.sh"]
 
