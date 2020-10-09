@@ -3,6 +3,10 @@ FROM fedora:32
 LABEL modified "philip.deegan <philip.deegan@gmail.com>"
 
 RUN dnf update -y
+# for ffmpeg (at least)
+RUN dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+
+RUN dnf update -y
 
 RUN dnf install -y java-1.8.0-openjdk xorg-x11-server-Xvfb git make cmake tar gzip unzip \
                    zlib-devel.x86_64 gcovr environment-modules wget m4 \
@@ -11,7 +15,7 @@ RUN dnf install -y java-1.8.0-openjdk xorg-x11-server-Xvfb git make cmake tar gz
                    python3-breathe python3-docutils python3-numpy python3-scipy python3-openmpi \
                    python3-mpi4py-openmpi libasan libubsan lcov python3-ddt \
                    which gitstats wget doxygen g++ clang \
-                   python3-h5py python3-matplotlib
+                   python3-h5py python3-matplotlib ninja-build ffmpeg python3-seaborn 
 
 
 VOLUME /data/teamcity_agent/conf
