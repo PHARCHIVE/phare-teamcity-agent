@@ -14,4 +14,4 @@ RUN dnf update -y &&  dnf install -y git make cmake ccache tar gzip unzip \
                    which gitstats wget doxygen /usr/bin/g++ clang cppcheck cppcheck-htmlreport \
                    python3-h5py python3-matplotlib ninja-build ffmpeg python3-seaborn 
 
-
+RUN echo "gcc: $(gcc --version)" && echo "clang: $(clang --version)" && echo "hdf5: $(dnf list installed | grep hdf5)"
