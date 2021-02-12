@@ -7,7 +7,7 @@ RUN dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-re
 
 RUN dnf update -y &&  dnf install -y git make cmake ccache tar gzip unzip \
                    zlib-devel.x86_64 gcovr environment-modules wget m4 \
-                   openmpi openmpi-devel hdf5 hdf5-devel \
+                   openmpi openmpi-devel hdf5 hdf5-devel perf \
                    hdf5-openmpi-devel python3 sphinx python3-sphinx python3-sphinx_rtd_theme \
                    python3-breathe python3-docutils python3-numpy python3-scipy python3-openmpi \
                    python3-mpi4py-openmpi libasan libubsan lcov python3-ddt python3-yaml \
