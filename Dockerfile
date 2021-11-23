@@ -1,4 +1,4 @@
-ARG RELEASE=32
+ARG RELEASE=33
 FROM fedora:$RELEASE
 
 RUN dnf update -y
