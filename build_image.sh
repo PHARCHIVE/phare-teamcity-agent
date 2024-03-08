@@ -1,4 +1,4 @@
-RELEASE=${1:-33}
+RELEASE=${1:-37}
 REGISTRY=${2:-"129.104.6.165:32219"}
 IMAGE="phare/teamcity-fedora"
 FULL_NAME="${REGISTRY}/${IMAGE}:${RELEASE}"
