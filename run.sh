@@ -15,9 +15,10 @@ dnf update -y && dnf install -y git make cmake ccache tar gzip unzip \
                    hdf5-openmpi-devel python3 sphinx python3-sphinx python3-sphinx_rtd_theme \
                    python3-breathe python3-docutils python3-numpy python3-scipy python3-openmpi \
                    python3-mpi4py-openmpi libasan libubsan lcov python3-ddt python3-yaml python3-devel \
-                   which doxygen /usr/bin/g++ clang cppcheck cppcheck-htmlreport python3-pip python3-vtk \
+                   which doxygen /usr/bin/g++ clang cppcheck cppcheck-htmlreport python3-pip \
                    python3-h5py python3-matplotlib ninja-build ffmpeg python3-seaborn ${DNF_INSTALL}
 
+python3 -m pip install vtk # dnf python3-vtk is old and not maintained by Kitware
 echo "gcc: $(gcc --version)" && echo "clang: $(clang --version)" && echo "hdf5: $(dnf list installed | grep hdf5)"
 
 cd ~/
