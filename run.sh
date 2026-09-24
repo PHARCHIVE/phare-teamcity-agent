@@ -9,7 +9,7 @@ dnf update -y
 # for ffmpeg (at least)
 dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 
-dnf update -y && dnf install -y git make cmake ccache tar gzip unzip \
+dnf update -y && dnf install -y git make cmake ccache tar gzip unzip python3-jupyter-core \
                    gcovr environment-modules wget m4 llvm elfutils compiler-rt \
                    openmpi openmpi-devel hdf5 hdf5-devel perf python3-pylint python3-dill \
                    hdf5-openmpi-devel python3 sphinx python3-sphinx python3-sphinx_rtd_theme \
